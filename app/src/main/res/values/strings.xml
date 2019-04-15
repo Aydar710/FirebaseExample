@@ -2,4 +2,6 @@
     <string name="app_name">FirebaseExample</string>
     <string name="add_users">Add Users</string>
     <string name="user_list">User List</string>
+    <string name="phone_number">Phone number</string>
+    <string name="authenticate">Authenticate</string>
 </resources>
