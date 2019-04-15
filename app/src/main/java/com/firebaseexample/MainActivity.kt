@@ -3,6 +3,7 @@ package com.firebaseexample
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.firebaseexample.signIn.SignInActivity
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,6 +35,11 @@ class MainActivity : AppCompatActivity() {
 
         btn_user_list.setOnClickListener {
             val intent = Intent(this, ListActivity::class.java)
+            startActivity(intent)
+        }
+
+        btn_authenticate.setOnClickListener {
+            val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
     }
