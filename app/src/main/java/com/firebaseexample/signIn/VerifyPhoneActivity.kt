@@ -9,6 +9,7 @@ import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.android.synthetic.main.activity_phone_login.*
 import java.util.concurrent.TimeUnit
 
 class VerifyPhoneActivity : AppCompatActivity() {
@@ -23,6 +24,10 @@ class VerifyPhoneActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         val phoneNumber = intent.getStringExtra(SignInActivity.PHONE_NUMBER)
         sendVerificationCode(phoneNumber)
+
+        btn_verify.setOnClickListener {
+            verifyCode(et_verification_code.text.toString())
+        }
     }
 
     private fun verifyCode(code: String) {
